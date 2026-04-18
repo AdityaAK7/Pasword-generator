@@ -23,8 +23,8 @@ PassGen is a sleek, modern, and cryptographically secure password generator buil
 
 1. **Clone the repository** (or copy the files):
    ```bash
-   git clone https://github.com/yourusername/passgen.git
-   cd passgen
+   git clone https://github.com/AdityaAK7/Password-generator.git
+   cd python-project
    ```
 
 2. **Install dependencies**:
