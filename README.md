@@ -50,3 +50,7 @@ PassGen is a sleek, modern, and cryptographically secure password generator buil
 ## 📄 License
 
 This project is open-source and available under the [MIT License](LICENSE).
+<br>
+---
+## Deployed Link
+https://pasword-generator-omega.vercel.app/
