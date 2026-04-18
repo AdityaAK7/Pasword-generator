@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassGen | Premium Password Generator</title>
+    <meta name="description" content="Generate secure, cryptographically strong passwords with instant strength analysis.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    
+    <main class="container">
+        <header>
+            <h1 id="main-title">PassGen</h1>
+            <p class="subtitle">Secure, minimal, and powerful.</p>
+        </header>
+
+        <section class="generator-card">
+            <div class="password-display">
+                <input type="text" id="password-output" readonly placeholder="Your password will appear here">
+                <button id="copy-btn" class="icon-btn" title="Copy to clipboard">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </button>
+            </div>
+
+            <div class="strength-meter">
+                <div class="strength-bar">
+                    <div id="strength-fill" class="fill"></div>
+                </div>
+                <span id="strength-label">Strength: --</span>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="length-slider">Length: <span id="length-val">16</span></label>
+                    <input type="range" id="length-slider" min="8" max="64" value="16">
+                </div>
+                
+                <button id="generate-btn" class="primary-btn">Generate Password</button>
+            </div>
+        </section>
+        
+        <footer class="footer">
+            <p>Powered by Python & Secrets</p>
+        </footer>
+    </main>
+
+    <div id="toast" class="toast">Copied to clipboard!</div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
